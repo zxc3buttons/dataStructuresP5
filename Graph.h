@@ -18,9 +18,17 @@ public:
     void removeEdge(int i, int j);
     void toString();
 
+    // Поиск в глубину - Depth-First-Search
     void DFS(int st, bool* visited);
+
+    // Связный ли граф?
     bool isConnectedGraph(int st);
-    void Dijkstra(int st, int end);
+
+    // Возвращает массив минимальных расстояний от стартовой вершины до конечной
+    int* Dijkstra(int st, int end);
+
+    // Вывод самого короткого пути от стартовой от до конечной вершины
+    void outputShortestPath(int st, int end, int* distance);
     
  
     ~Graph();
