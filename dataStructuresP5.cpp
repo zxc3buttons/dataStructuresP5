@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include "Graph.h"
 
 using namespace std;
@@ -26,16 +26,19 @@ int main()
 
     cout << "Adjacency matrix: " << endl;
     cout << endl;
+
     graph.toString();
     cout << endl;
 
-    if (graph.isConnectedGraph(0)) cout << "Graph is connected";
-    else cout << "Graph is disconnected" << endl;
+    graph.isConnectedGraph(0);
     cout << endl;
 
     int st, end;
     cout << "Enter start and end vertices to calculate path cost: "; cin >> st >> end;
-    graph.Dijkstra(st, end);
+    int* distance = graph.Dijkstra(st, end);
+    cout << endl;
+
+    graph.outputShortestPath(st, end, distance);
     cout << endl;
 }
 
