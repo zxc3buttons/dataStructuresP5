@@ -3,3 +3,5 @@
 2) Depth-First-Search
 3) Connection check on DFS
 4) Output shortest vertices
+
+graph input vertices start with "0"
